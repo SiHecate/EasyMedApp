@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HastaneHaritaActivity">
+
+    <!-- Harita Görüntüsü -->
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomSheet" />
+
+    <!-- Alt Sayfa -->
+    <LinearLayout
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp">
+
+        <!-- Hastane Bilgileri -->
+        <TextView
+            android:id="@+id/textViewHastaneAdi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hastane Adı"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textViewHastaneAdres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hastane Adresi"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/buttonRandevuAl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Randevu Al"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
